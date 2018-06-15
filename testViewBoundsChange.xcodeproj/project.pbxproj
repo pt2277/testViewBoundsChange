@@ -12,6 +12,7 @@
 		828C32A520D42817003C9437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828C32A320D42817003C9437 /* Main.storyboard */; };
 		828C32A720D42819003C9437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828C32A620D42819003C9437 /* Assets.xcassets */; };
 		828C32AA20D42819003C9437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828C32A820D42819003C9437 /* LaunchScreen.storyboard */; };
+		828C32B220D42836003C9437 /* BoundsObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C32B120D42836003C9437 /* BoundsObservableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		828C32A620D42819003C9437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		828C32A920D42819003C9437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		828C32AB20D42819003C9437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828C32B120D42836003C9437 /* BoundsObservableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundsObservableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		828C329E20D42817003C9437 /* testViewBoundsChange */ = {
 			isa = PBXGroup;
 			children = (
+				828C32B120D42836003C9437 /* BoundsObservableView.swift */,
 				828C329F20D42817003C9437 /* AppDelegate.swift */,
 				828C32A120D42817003C9437 /* ViewController.swift */,
 				828C32A320D42817003C9437 /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				828C32B220D42836003C9437 /* BoundsObservableView.swift in Sources */,
 				828C32A220D42817003C9437 /* ViewController.swift in Sources */,
 				828C32A020D42817003C9437 /* AppDelegate.swift in Sources */,
 			);
