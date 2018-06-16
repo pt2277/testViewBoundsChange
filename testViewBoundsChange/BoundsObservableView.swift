@@ -18,25 +18,23 @@ public class BoundsObservableView: UIView {
     
     public override var bounds: CGRect {
         willSet {
-            print("bounds: \(bounds)")
+            print("BOUNDS willSet bounds: \(bounds), frame: \(frame)")
             boundsDelegate?.boundsWillChange(self)
         }
         didSet {
-            print("bounds didSet: \(bounds)")
+            print("BOUNDS didSet bounds: \(bounds), frame: \(frame)")
             boundsDelegate?.boundsDidChange(self)
         }
     }
 
     public override var frame: CGRect {
         willSet {
-            print("willSet frame: \(frame), bounds: \(bounds)")
+            print("FRAME willSet frame: \(frame), bounds: \(bounds)")
             boundsDelegate?.boundsWillChange(self)
         }
         didSet {
-            print("didSet frame: \(frame), bounds: \(bounds)")
+            print("FRAME didSet frame: \(frame), bounds: \(bounds)")
             boundsDelegate?.boundsDidChange(self)
         }
     }
-
-
 }
