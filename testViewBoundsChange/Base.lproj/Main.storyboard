@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BoundsObservableView" customModule="testViewBoundsChange" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX5-Bk-c2x">
+                                <rect key="frame" x="124" y="350.5" width="127" height="30"/>
+                                <state key="normal" title="A Centered Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fX5-Bk-c2x" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5vN-9D-LIM"/>
+                            <constraint firstItem="fX5-Bk-c2x" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="v6k-Ft-5ce"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -105,9 +117,17 @@
                                     <constraint firstAttribute="height" constant="128" id="7pU-q6-jlo"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edz-KU-aeF">
+                                <rect key="frame" x="124" y="318" width="127" height="30"/>
+                                <state key="normal" title="A Centered Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="edz-KU-aeF" firstAttribute="centerX" secondItem="U3d-yq-ec0" secondAttribute="centerX" id="3Ce-7r-V9x"/>
+                            <constraint firstItem="edz-KU-aeF" firstAttribute="centerY" secondItem="U3d-yq-ec0" secondAttribute="centerY" id="UAf-4z-SfG"/>
                             <constraint firstItem="U3d-yq-ec0" firstAttribute="centerY" secondItem="m0r-ec-Cr2" secondAttribute="centerY" id="V0c-qm-g4b"/>
                             <constraint firstItem="U3d-yq-ec0" firstAttribute="centerX" secondItem="m0r-ec-Cr2" secondAttribute="centerX" id="VI8-Qr-9oV"/>
                             <constraint firstItem="U3d-yq-ec0" firstAttribute="width" secondItem="m0r-ec-Cr2" secondAttribute="width" id="pou-rc-rSd"/>

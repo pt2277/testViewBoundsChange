@@ -8,33 +8,26 @@
 import UIKit
 
 public protocol ViewBoundsObserving: class {
-    func boundsWillChange(_ view: BoundsObservableView);
-    func boundsDidChange(_ view: BoundsObservableView);
+    // Notifies the delegate that view's `bounds` has changed.
+    func boundsDidChange(_ view: BoundsObservableView, from previousBounds: CGRect, to bounds: CGRect);
 }
 
+/// You can observe bounds change with this view subclass via `ViewBoundsObserving` delegate.
+/// See also: [a forum post](https://forums.developer.apple.com/message/317152?et=watches.email.thread#317152) leading to this implementation.
 public class BoundsObservableView: UIView {
     
     public weak var boundsDelegate: ViewBoundsObserving?
     
-    public override var bounds: CGRect {
-        willSet {
-            print("BOUNDS willSet bounds: \(bounds), frame: \(frame)")
-            boundsDelegate?.boundsWillChange(self)
+    private var previousBounds: CGRect = .zero
+    
+    public override func layoutSubviews() {
+        if (bounds != previousBounds) {
+            print("Bounds changed from \(previousBounds) to \(bounds)")
+            boundsDelegate?.boundsDidChange(self, from: previousBounds, to: bounds)
+            previousBounds = bounds
         }
-        didSet {
-            print("BOUNDS didSet bounds: \(bounds), frame: \(frame)")
-            boundsDelegate?.boundsDidChange(self)
-        }
-    }
-
-    public override var frame: CGRect {
-        willSet {
-            print("FRAME willSet frame: \(frame), bounds: \(bounds)")
-            boundsDelegate?.boundsWillChange(self)
-        }
-        didSet {
-            print("FRAME didSet frame: \(frame), bounds: \(bounds)")
-            boundsDelegate?.boundsDidChange(self)
-        }
+        
+        // UIView's implementation will layout subviews for me using Auto Resizing mask or Auto Layout constraints.
+        super.layoutSubviews()
     }
 }
